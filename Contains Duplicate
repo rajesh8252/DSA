@@ -1,0 +1,25 @@
+package contains.duplicate;
+import java.util.HashSet;
+import java.util.Set;
+public class ContainsDuplicate {
+
+   public boolean dup(int nums[])
+   {
+       Set<Integer> number=new HashSet<Integer>();
+       for(int num:nums)
+       {
+           if(number.contains(num))
+           {
+               return true;
+           }
+           number.add(num);
+       }
+       return false;
+   }
+    public static void main(String[] args) {
+        int num[]={1,2,3,4,3};
+        ContainsDuplicate n=new ContainsDuplicate();
+        System.out.println(n.dup(num));
+    }
+    
+}
